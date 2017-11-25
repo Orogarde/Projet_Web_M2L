@@ -1,0 +1,26 @@
+.row {
+    display: flex;
+    flex-direction: row;
+    
+  }
+  
+  .row > [class^="col-"],
+  .row > [class*=" col-"] {
+    display: flex;
+    align-items: center;
+  }
+
+  h2 {
+ /*   background-color: gray; */
+  }
+  
+#btn1 {
+  display : flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
+}
+
+#header {
+  background-color: blue;
+}
