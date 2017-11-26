@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="Utilitaires\bootstrap\css\bootstrap.css" >
    <link rel="stylesheet" href="Utilitaires\bootstrap\css\row.css" > 
     <script src="Utilitaires\bootstrap\js\bootstrap.js"></script>
+    <?php include_once ("DataAccess/DataAcces.php") ?>
     <title>Document</title>
 </head>
 <body>

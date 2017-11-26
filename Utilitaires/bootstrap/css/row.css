@@ -22,5 +22,17 @@
 }
 
 #header {
-  background-color: blue;
+  background-image:linear-gradient(60deg, white, #2EC9F0);
+  
 }
+ body {
+ /* background-image:linear-gradient(white,#6EF3FF); */
+ }
+
+ #landing{
+  background-image:linear-gradient(white, #2EC9F0);
+ } 
+
+ #listItem {
+  display: inline-block;
+ }
