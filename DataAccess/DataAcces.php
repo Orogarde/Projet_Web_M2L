@@ -1,6 +1,6 @@
 <?php    
 
-    function connexion() {
+    function connexion() { // fonction permettant la connexion à la base de données 
     
     $host="localhost";
     $dbname="M2L";
@@ -16,7 +16,8 @@
 }
 
  
-     function IdetnomFormation()
+     function IdetnomFormation()  // fonction permettant de retourner une phrase avec l'id et le nom d'une formation 
+                                // dans chaque ligne de la liste
     {
 
       $pdo = connexion();
@@ -33,7 +34,7 @@
           
        
 
-            echo "<a class='list-group-item list-group-item-action '>"."Formation ".$valeur['id_Formation']." : ".$valeur['contenu_formation']." (voir plus d'infos)"."</a>";
+            echo "<a class='list-group-item list-group-item-action '>"."Formation ".$valeur['id_Formation']." : ".$valeur['contenu_formation']." (voir détails)"."</a>";
     }
  
       

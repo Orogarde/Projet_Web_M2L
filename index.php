@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php include_once ("DataAccess/DataAcces.php") ?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,13 +10,13 @@
     <link rel="stylesheet" href="Utilitaires\bootstrap\css\bootstrap.css" >
    <link rel="stylesheet" href="Utilitaires\bootstrap\css\row.css" > 
     <script src="Utilitaires\bootstrap\js\bootstrap.js"></script>
-    <?php include_once ("DataAccess/DataAcces.php") ?>
+   
     <title>Document</title>
 </head>
 <body>
   <?php 
-  include_once("Vues\header.php");
-  include_once("Vues\landing.php")
+  include_once("Vues\header.php"); // ajout à l'aide du php de l'header 
+  include_once("Vues\landing.php") // ajoutà l'aide du php de la landing page (liste des formations)
   ?>
   
 		

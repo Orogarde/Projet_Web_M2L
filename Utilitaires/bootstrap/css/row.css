@@ -1,10 +1,10 @@
-.row {
+.row {  /* permet de centrer les différents row */
     display: flex;
     flex-direction: row;
     
   }
   
-  .row > [class^="col-"],
+  .row > [class^="col-"],  /* centre le contenu des rows */
   .row > [class*=" col-"] {
     display: flex;
     align-items: center;
@@ -21,18 +21,50 @@
   
 }
 
-#header {
-  background-image:linear-gradient(60deg, white, #2EC9F0);
-  
+#header {  /* définie les bordures et leurs couleurs de l'id header  */
+ /* background-image:linear-gradient(60deg, white, #2EC9F0); */
+ border-radius: 44px 44px 44px 44px;
+ -moz-border-radius: 44px 44px 44px 44px;
+ -webkit-border-radius: 44px 44px 44px 44px;
+ border: 11px solid #CFCFB4;
+ background-color: #fff ;
 }
- body {
- /* background-image:linear-gradient(white,#6EF3FF); */
- }
+ body {  /*couleur du body */
+ /* background-image:linear-gradient(white,#6EF3FF); 
+ background: rgba(255,255,255,0.79);
+ background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,0.79) 0%, rgba(255,255,255,0.79) 0%, rgba(177,177,175,0.79) 37%, rgba(44,43,38,1) 100%);
+ background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,255,255,0.79)), color-stop(0%, rgba(255,255,255,0.79)), color-stop(37%, rgba(177,177,175,0.79)), color-stop(100%, rgba(44,43,38,1)));
+ background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,0.79) 0%, rgba(255,255,255,0.79) 0%, rgba(177,177,175,0.79) 37%, rgba(44,43,38,1) 100%);
+ background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,0.79) 0%, rgba(255,255,255,0.79) 0%, rgba(177,177,175,0.79) 37%, rgba(44,43,38,1) 100%);
+ background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,0.79) 0%, rgba(255,255,255,0.79) 0%, rgba(177,177,175,0.79) 37%, rgba(44,43,38,1) 100%);
+ background: radial-gradient(ellipse at center, rgba(255,255,255,0.79) 0%, rgba(255,255,255,0.79) 0%, rgba(177,177,175,0.79) 37%, rgba(44,43,38,1) 100%);
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#2c2b26', GradientType=1 );
+*/
+background-color: #24241F; 
+}
 
- #landing{
-  background-image:linear-gradient(white, #2EC9F0);
+ #landing{  /* définie les bordures et leurs couleurs de l'id landing  */
+ /* background-image:linear-gradient(white, #2EC9F0); */
+ border-radius: 0px 0px 81px 81px;
+ -moz-border-radius: 0px 0px 81px 81px;
+ -webkit-border-radius: 0px 0px 81px 81px;
+ border: 10px solid #CFCFB4;
+ background-color : #FFF ;
  } 
 
- #listItem {
-  display: inline-block;
+ #AF { /* définie les bordures et leurs couleurs de l'id AF ( autre formations) */
+  border-radius: 0px 0px 40px 40px;
+  -moz-border-radius: 0px 0px 40px 40px;
+  -webkit-border-radius: 0px 0px 40px 40px;
+  border: 10px solid #3D3D35;
  }
+
+ #FS { /* définie les bordures et leurs couleurs de l'id FS ( formations suivies)  */
+  border-radius: 0px 0px 40px 40px;
+  -moz-border-radius: 0px 0px 40px 40px;
+  -webkit-border-radius: 0px 0px 40px 40px;
+  border: 10px solid #3D3D35;
+
+ }
+
+ 
