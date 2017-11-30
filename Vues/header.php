@@ -5,20 +5,20 @@
     <div class="row" id="header"  >
     <div class="col-md-2"> <!-- logo de la maison des ligues -->
   
-    <img src="Utilitaires\M2L.png" class="rounded mx-auto d-block" alt="Logo"> 
+    <img src="ContenuImg\M2L.png" class="rounded mx-auto d-block" alt="Logo"> 
    
     </div>
     <div class="col-md-3 col-sm12" id="carousel"> <!-- carousel avec différents logos (sport,formation,equipe) -->
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="Utilitaires\sport.png" alt="First slide">
+      <img class="d-block w-100" src="ContenuImg\sport.png" alt="First slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="Utilitaires\formation.png" alt="Second slide">
+      <img class="d-block w-100" src="ContenuImg\formation.png" alt="Second slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="Utilitaires\equipe.png" alt="Third slide">
+      <img class="d-block w-100" src="ContenuImg\equipe.png" alt="Third slide">
     </div>
   </div>
 </div>

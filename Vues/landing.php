@@ -34,7 +34,12 @@
 				<div class="list-group" id="lg">
             	 <?php      
                             
-				 IdetNomFormation(); // appel de la fonction qui renvoie une phrase dans une ligne de la liste
+							AfficherFormation();
+						//	$tab = requprep(2);
+						//	foreach ($tab as $lign ) {
+						//		echo $lign["id_Formation"];}
+
+							 // appel de la fonction qui renvoie une phrase dans une ligne de la liste
 									 // l'id et le nom d'une formation			
 					 ?>
                             
