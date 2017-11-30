@@ -3,12 +3,14 @@
       <div class="col-md-1">
         <div class="row" > <!--  bouton pour imprimer une formation -->
         
-		<input class="btn btn-primary" type="submit" value="Imprimer">
+		 <!--<input class="btn btn-primary" type="submit" value="Imprimer">-->
       </div>
-      </div>
+	  </div>
+	  
       <div class="col-md-4 " id="FS"> <!-- liste des formations suivies -->
  
-			<section ><h3> Formations Suivies :</h3>
+			<section ><h3> Formations Suivies : </h3>
+			
 				<article>
 					
 					<p>
@@ -22,13 +24,14 @@
 <div class="col-md-2">
   
 </div>
+
 <div class="col-md-4 " id="AF">
   
 			<section><h3>Autre Formations :</h3> <!-- liste des formations  -->
 				
 					
 					
-				<div class="list-group">
+				<div class="list-group" id="lg">
             	 <?php      
                             
 				 IdetNomFormation(); // appel de la fonction qui renvoie une phrase dans une ligne de la liste
@@ -36,8 +39,7 @@
 					 ?>
                             
                     
-                 </div>
-					
+               
         
 			</section>
 

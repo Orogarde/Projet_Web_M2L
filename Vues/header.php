@@ -8,7 +8,7 @@
     <img src="Utilitaires\M2L.png" class="rounded mx-auto d-block" alt="Logo"> 
    
     </div>
-    <div class="col-md-3 col-sm12"> <!-- carousel avec différents logos (sport,formation,equipe) -->
+    <div class="col-md-3 col-sm12" id="carousel"> <!-- carousel avec différents logos (sport,formation,equipe) -->
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -33,15 +33,15 @@
 
         
     </div>
-    <div class="col-md-2"> <!-- bonton déconnexion --> 
+    <div class="col-md-2"> <!-- bouton déconnexion --> 
   
-    <input class="btn btn-primary" type="submit" value="Déconnexion">
+    <input class="btn btn-secondary" type="submit" value="Déconnexion">
         
     </div>
-    <div class="col-md-2"> <!--bonton historique  --> 
+    <div class="col-md-2"> <!--bouton historique  --> 
   
-    <input class="btn btn-primary" type="submit" value="Historique Des Formations">
+    <input class="btn btn-secondary" type="submit" value="Historique Des Formations">
         
     </div>
     </div>
-    <hr color="#CFCFB4" >
+    <hr color="#A0A4BA" >
