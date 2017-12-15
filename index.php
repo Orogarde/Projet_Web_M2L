@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<?php include_once ("DataAccess/AfficherFormation.php") ?>
+<?php include_once ("Vues/AfficherFormation.php") ?>
 <?php include_once ("DataAccess/formation.php") ?>
+<?php include_once ("Vues/connexionSite.php") ?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,6 +18,14 @@
 </head>
 <body>
   <?php 
+
+
+if(!isset($_COOKIE["moncookie"]))
+{
+    $url = "Pageconnexion.php";
+    redirection($url);
+    exit();
+}
 
   include_once("Vues\header.php"); // ajout à l'aide du php de l'header 
 

@@ -64,6 +64,15 @@ background-color: #6D7E7F;
   margin-bottom:1%;
  }
  
+ #cox {
+ 
+  border: 10px solid #A0A4BA;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 1%;
+  margin-bottom:1%;
+ }
 
  #FS { /* définie les bordures et leurs couleurs de l'id FS ( formations suivies)  */
   border-radius: 0px 0px 40px 40px;
