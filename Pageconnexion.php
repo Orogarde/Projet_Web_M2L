@@ -36,7 +36,7 @@ include_once("Vues\header.php");
 							</tr>							
 							<tr>
 								<td><label for="nom">Votre mdp : </label></td>
-								<td><input type="text" id="nm" name="motdepasse" size="25" placeholder="mdp..." maxlength="50" required /></td>
+								<td><input type="password" id="nm" name="motdepasse" size="25" placeholder="mdp..." maxlength="50" required /></td>
 							</tr>
                 </table>
                             <div class="row justify-content-md-center">
