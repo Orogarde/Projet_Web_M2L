@@ -47,6 +47,15 @@ return $data;
 
 }
 */
-
+function nomFormation($id)
+{
+    $pdo = connexion();
+    $requete = "select * from salarie natural join participer natural join formation where salarie.id_Salarie = participer.id_salarie and salarie.id_Salarie = :id";
+    $prepReq = $pdo->prepare($requete);
+    $prepReq->BindValue(':id',$id);
+    $execPrepReq = $prepReq->execute();
+    $data = $prepReq->fetchAll();
+    return $data;
+}
 
 ?>
