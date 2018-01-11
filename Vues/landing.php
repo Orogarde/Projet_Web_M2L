@@ -34,6 +34,7 @@
             	 <?php      
                             
 							AfficherFormation();
+							
 						//	$tab = requprep(2);
 						//	foreach ($tab as $lign ) {
 						//		echo $lign["id_Formation"];}

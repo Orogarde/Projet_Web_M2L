@@ -14,21 +14,17 @@
 	
 }
 
-function SelectFormation()  // fonction permettant de retourner une phrase avec l'id et le nom d'une formation 
+function SelectFormation($id)  // fonction permettant de retourner une phrase avec l'id et le nom d'une formation 
 // dans chaque ligne de la liste ainsi que l'affichage à l'aide d'un collapse de la description de la formation
 {
 
-$pdo = connexion();
-
-$requete = "select * from formation order by id_Formation";
-
-
-$execRequete = $pdo->query($requete);
-
-
-$data = $execRequete->fetchAll();
-
-return $data;
+    $pdo = connexion();
+    $requete = "select * from salarie natural join participer natural join formation where statuts='0' and salarie.id_Salarie = :id ";
+    $prepReq = $pdo->prepare($requete);
+    $prepReq->BindValue(':id',$id);
+    $execPrepReq = $prepReq->execute();
+    $data = $prepReq->fetchAll();
+    return $data;
 }
 
 /*function requprep($cont)
@@ -50,7 +46,7 @@ return $data;
 function nomFormation($id)
 {
     $pdo = connexion();
-    $requete = "select * from salarie natural join participer natural join formation where salarie.id_Salarie = participer.id_salarie and salarie.id_Salarie = :id";
+    $requete = "select * from participer join formation on participer.id_Formation=Formation.id_Formation where (statuts=1 or statuts=2) and participer.id_Salarie = :id";;
     $prepReq = $pdo->prepare($requete);
     $prepReq->BindValue(':id',$id);
     $execPrepReq = $prepReq->execute();

@@ -35,7 +35,7 @@
     </div>
     <div class="col-md-2"> <!-- bouton déconnexion --> 
   
-    <input class="btn btn-secondary" type="submit" value="Déconnexion">
+    <a class="btn btn-secondary" type="submit" value="Déconnexion" href="Pageconnexion.php">Déconnexion</a>
         
     </div>
     <div class="col-md-2"> <!--bouton historique  --> 
