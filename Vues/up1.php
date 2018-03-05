@@ -15,7 +15,7 @@
 <?php
         $connexion = connexion();
        
-        $requete = "update participer set statuts = '2' where participer.id_Salarie = :nom and participer.id_Formation = :id";        
+        $requete = "update participer set statuts = '1' where participer.id_Salarie = :nom and participer.id_Formation = :id";        
         $PrepRequete = $connexion->prepare($requete);
         $PrepRequete->bindValue(':id',$_POST["idFormation"]);
         $PrepRequete->bindValue(':nom',$_POST["idS"]);
@@ -23,7 +23,7 @@
        $execPrepRequete = $PrepRequete->execute();
     
        
-        $url = "../index.php";
+        $url = "../index3.php";
         echo 'redui';
         redirection($url);
         

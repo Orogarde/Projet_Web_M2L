@@ -33,7 +33,9 @@ if(!isset($_COOKIE["moncookie"]))
 
   include_once("Vues\header.php"); // ajout à l'aide du php de l'header 
 
-  include_once("Vues\landing.php") // ajoutà l'aide du php de la landing page (liste des formations)
+  include_once("Vues\landing.1.php") ;
+
+  include_once("Vues\landing.2.php") // ajoutà l'aide du php de la landing page (liste des formations)
 
   ?>
   

@@ -11,10 +11,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="Style\css\bootstrap.css" >
 <link rel="stylesheet" href="Style\css\row.css" > 
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="Style/css/mdb.min.css" rel="stylesheet"> 
 <script src="Javascript\js\bootstrap.js"></script>
 
-<title>Document</title>
+<title>Connexion M2L</title>
 </head>
 <body>
 <?php
@@ -24,10 +25,10 @@ setcookie("moncookie","",time()-3600);
 include_once("Vues\header.php");
 ?>
 <div class="container">
-    <div class="row">
-    <div class="col-md-4">
+    <div class="row d-flex justify-content-center">
+    <div class="col-md-12  d-flex justify-content-center">
     </div>
-        <div class="col-md-5">
+        <div class="col-md-12  d-flex justify-content-center">
     <form id="form1" name="form1" action="" method="POST" enctype="multipart/form-data" >
             <table id="cox" >
                             <tr>
@@ -40,7 +41,9 @@ include_once("Vues\header.php");
 							</tr>
                 </table>
                             <div class="row justify-content-md-center">
-            <input type="submit" id="smbt" name="oki" value=" connexion "/>
+                                <div class="col-12  d-flex justify-content-center" id="ich">
+            <input  type="submit" id="smbt" name="oki" value=" connexion "/>
+                </div>
             </div>
             
             </form>
@@ -54,17 +57,44 @@ include_once("Vues\header.php");
 				
                 if (isset($_POST['oki']))
                 {
-                    $id = $_POST['identifiant'];
+                    $nom = $_POST['identifiant'];
                     $mdp = $_POST['motdepasse'];
-                    if(Connex($id, $mdp))
+                    if(Connex($nom, $mdp))
                         {
-                            setcookie("moncookie",$id);
+                            $id=recupid($nom,$mdp);
+                            $ud=recupidEquipe($nom,$mdp);
+                            echo $id['id_Salarie'];
+                            if($id['id_Salarie'] == $ud['id_Equipe'])
+                            {
+                                setcookie("moncookie",$ud['id_Equipe']);
+                                $url = "index3.php";
+                                redirection($url);
+                                exit(); 
+                            }
+                            else
+                            {
+                            setcookie("moncookie", $id['id_Salarie']);
                             $url = "index.php";
 			                redirection($url);
-			                exit();
+                            exit();
+                            }
+                            
                         }
                     else echo "<div class='col-md-5'>Vous avez rentré un mauvais login ou mot de passe.</div>";
 	            }
-					?>       
+                    ?>      
+                    
+                    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    
+    <script type="text/javascript" src="js/popper.min.js"></script>
+   
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+	<script>
+            new WOW().init();
+    </script>  
 </body>
+
+
 </html>

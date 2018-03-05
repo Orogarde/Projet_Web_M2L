@@ -23,7 +23,7 @@
        $execPrepRequete = $PrepRequete->execute();
     
        
-        $url = "../index.php";
+        $url = "../index3.php";
         echo 'redui';
         redirection($url);
         

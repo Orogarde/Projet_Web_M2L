@@ -1,33 +1,34 @@
-.row {  /* permet de centrer les différents row */
-    display: flex;
+/*.row {  /* permet de centrer les différents row */
+  /*  display: flex;
     flex-direction: row;
     
-  }
+  }*/
   
-  .row > [class^="col-"],  /* centre le contenu des rows */
-  .row > [class*=" col-"] {
+/*  .row > [class^="col-"],  /* centre le contenu des rows */
+/*  .row > [class*=" col-"] {
     display: flex;
     align-items: center;
-  }
+    width: 100%; 
+  } */
 
-  h2 {
- /*   background-color: gray; */
+  h3 {
+ text-align: center !important;
   }
   
 #btn1 {
-  display : flex;
+ /*display : flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-start; */
   
 }
 
 #header {  /* définie les bordures et leurs couleurs de l'id header  */
  /* background-image:linear-gradient(60deg, white, #2EC9F0); */
- border-radius: 44px 44px 44px 44px;
+/* border-radius: 44px 44px 44px 44px;
  -moz-border-radius: 44px 44px 44px 44px;
- -webkit-border-radius: 44px 44px 44px 44px;
- border: 11px solid #A0A4BA;
- background-color: #DBFCFF ;
+ -webkit-border-radius: 44px 44px 44px 44px; */
+ border: 11px solid rgb(78, 93, 168);
+ background-color: rgb(255, 255, 255) ;
 }
  body {  /*couleur du body */
  /* background-image:linear-gradient(white,#6EF3FF); 
@@ -40,7 +41,7 @@
  background: radial-gradient(ellipse at center, rgba(255,255,255,0.79) 0%, rgba(255,255,255,0.79) 0%, rgba(177,177,175,0.79) 37%, rgba(44,43,38,1) 100%);
  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#2c2b26', GradientType=1 );
 */
-background-color: #6D7E7F; 
+background-color: rgb(36, 36, 36); 
 }
 
  #landing{  /* définie les bordures et leurs couleurs de l'id landing  */
@@ -48,41 +49,45 @@ background-color: #6D7E7F;
  border-radius: 15px 15px 15px 15px;
  -moz-border-radius: 15px 15px 15px 15px;
  -webkit-border-radius: 15px 15px 15px 15px;
- border: 10px solid #A0A4BA;
- background-color : #DBFCFF ;
+ border: 11px solid rgb(36, 36, 36); 
+ background-color: rgb(36, 36, 36);  ;
  } 
 
  #AF { /* définie les bordures et leurs couleurs de l'id AF ( autre formations) */
-  border-radius: 40px 40px 40px 40px;
+ /* border-radius: 40px 40px 40px 40px;
   -moz-border-radius: 40px 40px 40px 40px;
-  -webkit-border-radius: 40px 40px 40px 40px;
-  border: 10px solid #A0A4BA;
+  -webkit-border-radius: 40px 40px 40px 40px; */
+  border: 8px solid rgb(78, 93, 168);
+  background-color: white;  ;
   display: flex;
   flex-direction: column;
   width: 100%;
   margin-top: 1%;
-  margin-bottom:1%;
+  margin-bottom:25px;
  }
  
  #cox {
- 
-  border: 10px solid #A0A4BA;
+ background-color: white;
+  border: 10px solid rgb(78, 93, 168);
   display: flex;
   flex-direction: column;
   width: 100%;
   margin-top: 1%;
   margin-bottom:1%;
  }
-
+#bb {
+  color : rgb(78, 93, 168);
+}
  #FS { /* définie les bordures et leurs couleurs de l'id FS ( formations suivies)  */
-  border-radius: 40px 40px 40px 40px;
+ /* border-radius: 40px 40px 40px 40px;
   -moz-border-radius: 40px 40px 40px 40px;
-  -webkit-border-radius: 40px 40px 40px 40px;
-  border: 10px solid #A0A4BA;
+  -webkit-border-radius: 40px 40px 40px 40px; */
+  border: 8px solid rgb(78, 93, 168);
   flex-direction: column;
   width: 100%;
   margin-top: 1%;
-  margin-bottom: 1%;
+  margin-bottom: 25px;
+  background-color: white;  
  }
 
 #lg {
@@ -90,14 +95,52 @@ background-color: #6D7E7F;
   width: 100%;
 }
 #listF {
-  background-color: #9194A8 ;
+  background-color: rgb(96, 111, 187) ;
   color: white;
   border :1px solid black;
  }
-
+ .card-body  {
+  background-color: rgb(78, 93, 168);
+  color : white;
+}
  .espace {
 
   padding: 5px;
   margin:5%;
+  text-align: center;
+ }
+
+ .col {
+  width: 100%;
+ }
+#hr-{
+  color: #ffffff;
+  background-color: rgb(78, 93, 168);
+  max-width: 90%;
+}
+ .spanou
+ {
+  margin-top: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 0;
+  padding-left: 15px;
+  max-width:100%;
+  height:0px;
+  border: solid 1px #ffffff;
+  text-align: center;
+ }
+ @media only screen and (max-width: 640px) {
+  #carousel {
+    display: none !important;
+ 
+   }
+ }
+
+ #ich {
+  
+ 
+  width: 100%;
+
  }
  

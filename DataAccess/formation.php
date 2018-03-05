@@ -26,7 +26,18 @@ function SelectFormation($id)  // fonction permettant de retourner une phrase av
     $data = $prepReq->fetchAll();
     return $data;
 }
+function SelectFormationEquipe($id)  // fonction permettant de retourner une phrase avec l'id et le nom d'une formation 
+// dans chaque ligne de la liste ainsi que l'affichage à l'aide d'un collapse de la description de la formation
+{
 
+    $pdo = connexion();
+    $requete = "select * from salarie natural join participer natural join formation where statuts='2' and salarie.Id_Equipe = :id ";
+    $prepReq = $pdo->prepare($requete);
+    $prepReq->BindValue(':id',$id);
+    $execPrepReq = $prepReq->execute();
+    $data = $prepReq->fetchAll();
+    return $data;
+}
 /*function requprep($cont)
 {   
 

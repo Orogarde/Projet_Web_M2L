@@ -30,17 +30,21 @@
     </div>
     <div class="col col-md-3 col-sm-3 ">
  
-    <div class="col-md-4 col-sm-4 col-lg-4 d-flex justify-content-around"> <!-- bouton déconnexion --> 
+    <div class="col-md-2 col-sm-2 col-lg-2 d-flex justify-content-around"> <!-- bouton déconnexion --> 
   
     <a  class="btn btn-primary" type="button" value="Déconnexion" href="Pageconnexion.php" >Déconnexion</a>
         
     </div>
-    <div class="col-md-4 col-sm-4 col-lg-4 d-flex justify-content-around"> <!--bouton historique  --> 
+    <div class="col-md-2 col-sm-2 col-lg-2 d-flex justify-content-around"> <!--bouton historique  --> 
   
     <a  class="btn btn-primary" type="button" value="Déconnexion" href="Pageconnexion.php" >historique</a>
         
     </div>
-
+    <div class="col-md-2 col-sm-2 col-lg-2 d-flex justify-content-around"> <!--bouton historique  --> 
+  
+    <a  class="btn btn-primary" type="button" value="Déconnexion" href="index3.php" >Offres et suivies</a>
+        
+    </div>
 </div>
     </div>
 </div>
