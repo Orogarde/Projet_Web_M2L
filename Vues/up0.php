@@ -15,10 +15,10 @@
 <?php
         $connexion = connexion();
        
-        $requete = "update participer set statuts = '0' where participer.id_Salarie = :nom and participer.id_Formation = :id";        
+        $requete = 'DELETE FROM `participer` WHERE `participer`.`id_Salarie` = :id AND `participer`.`id_Formation` = :forma';        
         $PrepRequete = $connexion->prepare($requete);
-        $PrepRequete->bindValue(':id',$_POST["idFormation"]);
-        $PrepRequete->bindValue(':nom',$_POST["idS"]);
+        $PrepRequete->bindValue(':forma',$_POST["idFormation"]);
+        $PrepRequete->bindValue(':id',$_POST["idS"]);
        
        $execPrepRequete = $PrepRequete->execute();
     

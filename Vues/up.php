@@ -15,10 +15,10 @@
 <?php
         $connexion = connexion();
        
-        $requete = "update participer set statuts = '2' where participer.id_Salarie = :nom and participer.id_Formation = :id";        
+        $requete = 'INSERT INTO `participer` (`id_Salarie`, `id_Formation`, `statuts`) VALUES (:id, :forma, 2)';        
         $PrepRequete = $connexion->prepare($requete);
-        $PrepRequete->bindValue(':id',$_POST["idFormation"]);
-        $PrepRequete->bindValue(':nom',$_POST["idS"]);
+        $PrepRequete->bindValue(':forma',$_POST["idFormation"]);
+        $PrepRequete->bindValue(':id',$_POST["idS"]);
        
        $execPrepRequete = $PrepRequete->execute();
     

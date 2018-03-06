@@ -52,7 +52,7 @@ function AfficherFormationE()
  
    function AfficherFormation()
    {
-    $data= SelectFormation($_COOKIE["moncookie"]);
+    $data= SelectFormation();
    
 
         foreach ($data as $valeur) {
@@ -61,7 +61,7 @@ function AfficherFormationE()
             echo 
             "<a class='list-group-item list-group-item-action view overlay' id='listF' data-toggle='collapse' 
                 href='#".$valeur['id_Formation']."
-                'aria-expanded='false' aria-controls='collapseExample'>".
+                'aria-expanded='false' aria-controls='collapseExample' ".verifetat($valeur['intitule_formation']).">".
                 "  Formation ".$valeur['id_Formation']." : ".$valeur['intitule_formation']."
                 <i class='fa fa-arrow-circle-o-down' aria-hidden='true'></i>
                 <div class='mask flex-center rgba-black-strong'>
@@ -88,7 +88,7 @@ function AfficherFormationE()
                 ?>
                         <form action="vues/up.php" method="POST" id="form<?php echo $valeur['id_Formation'];?>">
                         <input type="hidden" name="idFormation" value="<?php echo $valeur['id_Formation'];?>">
-                        <input type="hidden" name="idS" value="<?php echo $valeur['id_Salarie'];?>">
+                        <input type="hidden" name="idS" value="<?php echo $_COOKIE["moncookie"];?>">
                                 <input type="submit" class="btn btn-outline-white waves-effect" value="S'inscrire à cette formation">
                         </form>
               <?php                                     
@@ -98,7 +98,7 @@ function AfficherFormationE()
                              }
  
         
-                             
+             
  
      
     }
@@ -110,16 +110,16 @@ function AfficherFormationE()
          foreach ($data as $valeur) {
            
               
-             echo 
-             "<a class='list-group-item list-group-item-action view overlay' id='listF' data-toggle='collapse' 
-                 href='#".$valeur['id_Formation']."
-                 'aria-expanded='false' aria-controls='collapseExample'>".
-                 "  Formation ".$valeur['id_Formation']." : ".$valeur['intitule_formation']."
-                 <i class='fa fa-arrow-circle-o-down' aria-hidden='true'></i>
-                 <div class='mask flex-center rgba-black-strong'>
-                 <p>Voir la formation ".$valeur['intitule_formation']."</p>
-             </div></a>"
-                 ;
+            echo 
+            "<a class='list-group-item list-group-item-action view overlay' id='listF' data-toggle='collapse' 
+                href='#".$valeur['id_Formation']."
+                'aria-expanded='false' aria-controls='collapseExample' ".verifetat($valeur['intitule_formation']).">".
+                "  Formation ".$valeur['id_Formation']." : ".$valeur['intitule_formation']."
+                <i class='fa fa-arrow-circle-o-down' aria-hidden='true'></i>
+                <div class='mask flex-center rgba-black-strong'>
+                <p>Voir la formation ".$valeur['intitule_formation']."</p>
+            </div></a>"
+                ;
  
  
  
@@ -140,7 +140,7 @@ function AfficherFormationE()
                  ?>
                          <form action="vues/up.1.php" method="POST" id="form<?php echo $valeur['id_Formation'];?>">
                          <input type="hidden" name="idFormation" value="<?php echo $valeur['id_Formation'];?>">
-                         <input type="hidden" name="idS" value="<?php echo $valeur['id_Salarie'];?>">
+                         <input type="hidden" name="idS" value="<?php echo $_COOKIE["moncookie"]?>">
                                  <input type="submit" class="btn btn-outline-white waves-effect" value="S'inscrire à cette formation">
                          </form>
                <?php                                     
@@ -207,7 +207,6 @@ function AfficherFormationE()
      }
 
   
-
 
 
   

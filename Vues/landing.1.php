@@ -9,8 +9,9 @@
 	  </div>-->
 	  
       <div class="col-md-12 " id="FS"> <!-- liste des formations suivies -->
- 
-			<section ><h3 id="bb"> Formations en attentes de validation : </h3>
+		<?php	$nn = nomEquipe($_COOKIE["moncookie"]); ?>
+
+			<section ><h3 id="bb"> Formations de l'equipe  <?php echo $nn['Nom_Equipe']; ?>  en attentes de validation : </h3>
 			
 			<div class="list-group" id="lg">
             	 <?php      
