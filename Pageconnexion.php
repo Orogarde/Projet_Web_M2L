@@ -1,4 +1,4 @@
-<?php include_once ("Vues/connexionSite.php") ?>
+<?php include_once ("DataAccess/connexionSite.php") ?>
 <?php include_once ("DataAccess/formation.php") ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -67,7 +67,7 @@ include_once("Vues\header.php");
                             if($id['id_Salarie'] == $ud['id_Equipe'])
                             {
                                 setcookie("moncookie",$ud['id_Equipe']);
-                                $url = "index3.php";
+                                $url = "index-chef-equipe.php";
                                 redirection($url);
                                 exit(); 
                             }

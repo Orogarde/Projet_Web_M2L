@@ -1,4 +1,4 @@
-<div class="container"> <!-- création d'un container pour les listes de formations   -->
+<div class="container-fluid"> <!-- création d'un container pour les listes de formations   -->
 	
 <div class="row" id="landing" >
   <!--    <div class="col-md-1">
@@ -13,11 +13,11 @@
 			<section ><h3 id="bb"> Formations Suivies : </h3>
 			
 			<div class="list-group" id="lg">
-            	 <?php      
-                            
-							AfficherFormationS();
-					
-					 ?>
+            	 <?php 
+
+													AfficherFormationS();
+
+													?>
 				
 			</section>
 				
@@ -33,9 +33,9 @@
 					
 					
 				<div class="list-group" id="lg">
-            	 <?php      
-                            
-							AfficherFormation();
+            	 <?php 
+
+													AfficherFormation();
 							
 						//	$tab = requprep(2);
 						//	foreach ($tab as $lign ) {
@@ -43,7 +43,7 @@
 
 							 // appel de la fonction qui renvoie une phrase dans une ligne de la liste
 									 // l'id et le nom d'une formation			
-					 ?>
+													?>
                             
                     
                

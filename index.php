@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php include_once ("Vues/AfficherFormation.php") ?>
 <?php include_once ("DataAccess/formation.php") ?>
-<?php include_once ("Vues/connexionSite.php") ?>
+<?php include_once ("DataAccess/connexionSite.php") ?>
 
 <html lang="en">
 <head>
@@ -16,6 +16,7 @@
     <script src="Javascript\js\bootstrap.js"></script>
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="Style/css/mdb.min.css" rel="stylesheet"> 
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Maison Des Ligues</title>
 </head>
 <body>
@@ -32,8 +33,9 @@ if(!isset($_COOKIE["moncookie"]))
     
 
   include_once("Vues\header.php"); // ajout à l'aide du php de l'header 
-
-  include_once("Vues\landing.php") // ajoutà l'aide du php de la landing page (liste des formations)
+  include_once("Vues\session.php"); // ajout à l'aide du php de l'header
+  include_once("Vues\landing.php") ;
+  include_once("Vues\Footer.php") // ajoutà l'aide du php de la landing page (liste des formations)
 
   ?>
   
