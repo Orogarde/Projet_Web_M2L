@@ -103,6 +103,13 @@ background-color: rgb(194, 194, 194);
  }
 #bb {
   color : rgb(78, 93, 168);
+  text-align: center !important;
+}
+#bbb {
+  color : rgb(233, 154, 35);
+  text-align: center !important;
+  font-size: 20px !important;    
+  font-weight: bold;
 }
  #FS { /* définie les bordures et leurs couleurs de l'id FS ( formations suivies)  */
  /* border-radius: 40px 40px 40px 40px;

@@ -15,7 +15,7 @@
 			<div class="list-group" id="lg">
             	 <?php      
                             
-							AfficherFormationSAdmin();
+							AfficherFormationSAdmin(); 
 					
 					 ?>
 				
@@ -35,7 +35,11 @@
 				<div class="list-group" id="lg">
             	 <?php      
                             
+							
+							
 							AfficherFormationAdmin();
+						
+							
 							
 						//	$tab = requprep(2);
 						//	foreach ($tab as $lign ) {

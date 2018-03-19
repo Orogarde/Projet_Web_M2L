@@ -5,7 +5,7 @@ function AfficherFormationE()
 {
  $data= SelectFormationEquipe($_COOKIE["moncookie"]);
 
-
+ $forma_dispo=0;
      foreach ($data as $valeur) {
        
           
@@ -41,13 +41,13 @@ function AfficherFormationE()
            <?php                                     
                 echo "</div>
              </div>";
-
+             $forma_dispo=1;
                           }
 
      
                           
 
-  
+      if (!$forma_dispo) echo " <div id='bbb'>Vous n'avez pas de demandes de formations en attente de validation</div>";
  }
 
  
@@ -55,7 +55,7 @@ function AfficherFormationE()
    {
     $data= SelectFormation();
    
-   
+    $forma_dispo=0;
         foreach ($data as $valeur) {
             if (!verifetat($valeur['intitule_formation'])) 
             
@@ -99,20 +99,21 @@ function AfficherFormationE()
               <?php                                     
                    echo "</div>
                 </div>";
-
+                $forma_dispo=1;
                              }
                             }
  
         
              
- 
+       if (!$forma_dispo) echo " <div id='bbb'>Vous n'avez pas d'offres de formations</div>";
      
     }
     function AfficherFormationAdmin()
     {
      $data= SelectFormation($_COOKIE["moncookie"]);
     
- 
+        $forma_dispo=0;
+    
          foreach ($data as $valeur) {
           if (!verifetat($valeur['intitule_formation'])) 
           {
@@ -153,13 +154,16 @@ function AfficherFormationE()
                <?php                                     
                     echo "</div>
                  </div>";
+                 $forma_dispo=1;
  
                               }
                             }
-         
+                     
+                        
+                        
                               
   
-      
+      if (!$forma_dispo) echo " <div id='bbb'>Vous n'avez pas d'offres de formations</div>";
      }
 
 
@@ -168,6 +172,8 @@ function AfficherFormationE()
  
         $data= nomFormationV($_COOKIE["moncookie"]);
  
+        $forma_dispo=0;
+        
         foreach ($data as $valeur) {
             
                
@@ -208,7 +214,7 @@ function AfficherFormationE()
                 <?php                                     
                      echo "</div>
                   </div>";
-  
+                  $forma_dispo=1;
                                }
                 
         $data= nomFormationEnatt($_COOKIE["moncookie"]);
@@ -246,11 +252,11 @@ function AfficherFormationE()
                        <?php                                     
                             echo "</div>
                          </div>";
-         
+                         $forma_dispo=1;
                                       }
          
                               
-  
+      if (!$forma_dispo) echo " <div id='bbb'>Vous ne suivez pas de formations</div>";
       
      }
 
@@ -258,7 +264,7 @@ function AfficherFormationE()
      {
   
          $data= nomFormationV($_COOKIE["moncookie"]);
-  
+         $forma_dispo=0;
          foreach ($data as $valeur) {
              
                 
@@ -299,7 +305,7 @@ function AfficherFormationE()
                  <?php                                     
                       echo "</div>
                    </div>";
-   
+                   $forma_dispo=1;
                                 }
                                 $data= nomFormationEnatt($_COOKIE["moncookie"]);
                                 
@@ -336,16 +342,16 @@ function AfficherFormationE()
                                                <?php                                     
                                                     echo "</div>
                                                  </div>";
-                                 
+                                                 $forma_dispo=1;
                                                               }
-                                 
+                                                              if (!$forma_dispo) echo " <div id='bbb'>Vous ne suivez pas de formations</div>";
 
                             }
                             function historique()
                             {
                          
                                 $data= Selecthisto($_COOKIE["moncookie"]);
-                         
+                                $forma_dispo=0;
                                 foreach ($data as $valeur) {
                                     
                                        
@@ -382,8 +388,9 @@ function AfficherFormationE()
                                         <?php                                     
                                              echo "</div>
                                           </div>";
-                          
+                                          $forma_dispo=1;
                                                        }
+                                                       if (!$forma_dispo) echo " <div id='bbb'>Vous n'avez pas de formations dans votre historique</div>";
 
                                                     }
                                                   
