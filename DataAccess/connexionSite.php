@@ -64,4 +64,15 @@ function recupidEquipe($nom,$mdp)
 
 }
 
+function chef()
+{
+    $connexion = connexion();
+    $requete = "select id_Salarie from equipe where id_Salarie = :id";
+    $resultat = $connexion->prepare($requete);
+    $resultat->BindValue(':id',$_COOKIE["moncookie"]);
+    $execResultat = $resultat->execute();
+    $tabResultat = $resultat->fetch();
+    if ($tabResultat) return true;else return false;
+}
+
 ?>

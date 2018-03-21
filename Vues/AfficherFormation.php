@@ -92,7 +92,7 @@ function AfficherFormationE()
                         <form action="vues/insert-statut.php" method="POST" id="form<?php echo $valeur['id_Formation'];?>">
                         <input type="hidden" name="idFormation" value="<?php echo $valeur['id_Formation'];?>">
                         <input type="hidden" name="idS" value="<?php echo $_COOKIE["moncookie"];?>">
-                              <input type="submit" class="btn btn-outline-white waves-effect" onclick="toastr.success('Hi! I am success message.')" value="S'inscrire à cette formation">
+                              <input type="submit" class="btn btn-outline-white waves-effect" value="S'inscrire à cette formation">
                                 
 
                         </form>

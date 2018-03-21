@@ -17,7 +17,7 @@
      statut1();
     
        
-        $url = "../index-chef-equipe.php";
+        $url = "../index.php";
         echo 'redui';
         redirection($url);
         

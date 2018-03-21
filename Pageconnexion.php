@@ -62,22 +62,22 @@ include_once("Vues\header-connexion.php");
                     if(Connex($nom, $mdp))
                         {
                             $id=recupid($nom,$mdp);
-                            $ud=recupidEquipe($nom,$mdp);
-                            echo $id['id_Salarie'];
-                            if($id['id_Salarie'] == $ud['id_Equipe'])
-                            {
-                                setcookie("moncookie",$ud['id_Equipe']);
-                                $url = "index-chef-equipe.php";
-                                redirection($url);
-                                exit(); 
-                            }
-                            else
-                            {
+                           // $ud=recupidEquipe($nom,$mdp);
+                           // echo $id['id_Salarie'];
+                         //   if($id['id_Salarie'] == $ud['id_Equipe'])
+                        //    {
+                        //        setcookie("moncookie",$ud['id_Equipe']);
+                          //      $url = "index-chef-equipe.php";
+                          //      redirection($url);
+                            //    exit(); 
+                          //  }
+                            //else
+                            
                             setcookie("moncookie", $id['id_Salarie']);
                             $url = "index.php";
 			                redirection($url);
                             exit();
-                            }
+                            
                             
                         }
                     else echo "<div class='col-md-5'>Vous avez rentré un mauvais login ou mot de passe.</div>";

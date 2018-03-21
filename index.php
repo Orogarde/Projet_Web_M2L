@@ -34,6 +34,7 @@ if(!isset($_COOKIE["moncookie"]))
 
   include_once("Vues\header.php"); // ajout à l'aide du php de l'header 
   include_once("Vues\session.php"); // ajout à l'aide du php de l'header
+  include_once("Vues\landing-validation.php") ;
   include_once("Vues\landing.php") ;
   include_once("Vues\Footer.php") // ajoutà l'aide du php de la landing page (liste des formations)
 

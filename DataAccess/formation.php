@@ -38,6 +38,18 @@ function SelectFormationEquipe($id)  // fonction permettant de retourner une phr
     $data = $prepReq->fetchAll();
     return $data;
 }
+function SelectidEquipe($id)  // fonction permettant de retourner une phrase avec l'id et le nom d'une formation 
+// dans chaque ligne de la liste ainsi que l'affichage à l'aide d'un collapse de la description de la formation
+{
+
+    $pdo = connexion();
+    $requete = "select id_Salarie from salarie natural join participer natural join formation where statuts='2' and salarie.Id_Equipe = :id ";
+    $prepReq = $pdo->prepare($requete);
+    $prepReq->BindValue(':id',$id);
+    $execPrepReq = $prepReq->execute();
+    $data = $prepReq->fetchAll();
+    return $data;
+}
 /*function requprep($cont)
 {   
 
@@ -57,7 +69,7 @@ function SelectFormationEquipe($id)  // fonction permettant de retourner une phr
 function nomFormationV($id)
 {
     $pdo = connexion();
-    $requete = "select * from participer join formation on participer.id_Formation=Formation.id_Formation where statuts=1 and participer.id_Salarie = :id";;
+    $requete = "select * from participer join formation on participer.id_Formation=Formation.id_Formation where statuts=1 and participer.id_Salarie = :id";
     $prepReq = $pdo->prepare($requete);
     $prepReq->BindValue(':id',$id);
     $execPrepReq = $prepReq->execute();
@@ -67,7 +79,7 @@ function nomFormationV($id)
 function nomFormationEnatt($id)
 {
     $pdo = connexion();
-    $requete = "select * from participer join formation on participer.id_Formation=Formation.id_Formation where statuts=2 and participer.id_Salarie = :id";;
+    $requete = "select * from participer join formation on participer.id_Formation=Formation.id_Formation where statuts=2 and participer.id_Salarie = :id";
     $prepReq = $pdo->prepare($requete);
     $prepReq->BindValue(':id',$id);
     $execPrepReq = $prepReq->execute();

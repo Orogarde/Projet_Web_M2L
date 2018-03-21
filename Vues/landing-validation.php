@@ -1,3 +1,5 @@
+<?php if(chef()) { ?>
+
 <div class="container"> <!-- création d'un container pour les listes de formations   -->
 	
 <div class="row" id="landing" >
@@ -32,3 +34,4 @@
 
 </div>
 </div>
+ <?php } ?>
