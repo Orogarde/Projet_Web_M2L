@@ -12,8 +12,10 @@
 <link rel="stylesheet" href="Style\css\bootstrap.css" >
 <link rel="stylesheet" href="Style\css\row.css" > 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="Style/css/mdb.min.css" rel="stylesheet"> 
+<link href="Style/css/mdb.min.css" rel="stylesheet"> 
 <script src="Javascript\js\bootstrap.js"></script>
+<script type="text/javascript" src="Javascript/alert.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 <title>Connexion M2L</title>
 </head>
@@ -62,25 +64,15 @@ include_once("Vues\header-connexion.php");
                     if(Connex($nom, $mdp))
                         {
                             $id=recupid($nom,$mdp);
-                           // $ud=recupidEquipe($nom,$mdp);
-                           // echo $id['id_Salarie'];
-                         //   if($id['id_Salarie'] == $ud['id_Equipe'])
-                        //    {
-                        //        setcookie("moncookie",$ud['id_Equipe']);
-                          //      $url = "index-chef-equipe.php";
-                          //      redirection($url);
-                            //    exit(); 
-                          //  }
-                            //else
-                            
                             setcookie("moncookie", $id['id_Salarie']);
                             $url = "index.php";
-			                redirection($url);
+                            $delai = 1;
+                           // redirection($url);
+                           header("Refresh: $delai;url=$url");
+                           echo "<script>réussi()</script>";
                             exit();
-                            
-                            
                         }
-                    else echo "<div class='col-md-5'>Vous avez rentré un mauvais login ou mot de passe.</div>";
+                    else echo "<script>raté()</script>";
 	            }
                     ?>      
                     
