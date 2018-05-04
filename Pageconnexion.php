@@ -60,7 +60,7 @@ include_once("Vues\header-connexion.php");
                 if (isset($_POST['oki']))
                 {
                     $nom = $_POST['identifiant'];
-                    $mdp = $_POST['motdepasse'];
+                    $mdp = md5($_POST['motdepasse']);
                     if(Connex($nom, $mdp))
                         {
                             $id=recupid($nom,$mdp);

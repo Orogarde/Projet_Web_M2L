@@ -7,8 +7,9 @@
    
 <?php 
 
-$nom = nomSalarie($_COOKIE["moncookie"]); 
-echo "session de ". $nom["nom_Salarie"] ;
+//$nom = nomSalarie($_COOKIE["moncookie"]); 
+//echo "session de ". $nom["nom_Salarie"] ;
+AfficherInfos();
 
 
 ?>

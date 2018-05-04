@@ -21,21 +21,15 @@ function Connex($nom,$mdp)
 }
 
 
-function redirection($cible) {
+function redirection($cible) 
+{
     
     header('Location:'.$cible, false);
 }
 
-function redi()
 
-{
-    header('Location: index.php', false);
-}
 
-function deco()
-{
-    setcookie("moncookie","",time()-3600);
-}
+
 
 
 function recupid($nom,$mdp)

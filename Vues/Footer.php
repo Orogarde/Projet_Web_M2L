@@ -37,7 +37,7 @@
 
                     <p class="pt-3 pr-2">Ce site utilise des cookies pour améliorer l'expérience utilisateur</p>
 
-                    <a type="button" class="btn btn-primary">voir infos <i class="fa fa-book ml-1"></i></a>
+                    <a href=""type="button" class="btn btn-primary">voir infos <i class="fa fa-book ml-1"></i></a>
                     <a type="button" class="btn btn-outline-primary waves-effect" data-dismiss="modal">Ok, merci</a>
                 </div>
             </div>

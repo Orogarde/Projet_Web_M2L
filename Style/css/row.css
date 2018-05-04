@@ -133,6 +133,22 @@ background-color: rgb(194, 194, 194);
   border :1px solid black;
   margin-bottom: 10px;
  }
+ 
+ #colorsession {
+  
+  color: white;
+  
+  
+ }
+ .info
+ {
+   width : 50%;
+   text-align : center;
+  margin : auto;
+  font-size: 15px;
+  padding: 5px !important ; 
+   
+ }
 
  #session {
    background-color: rgb(235, 235, 235); 

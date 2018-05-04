@@ -202,5 +202,17 @@ function test_pdf($id)
     $resultat=$prep->fetchAll();
     return $resultat;
 }
+function SelectinfosSalarie($id)  // fonction permettant de retourner une phrase avec l'id et le nom d'une formation 
+// dans chaque ligne de la liste ainsi que l'affichage à l'aide d'un collapse de la description de la formation
+{
+
+    $pdo = connexion();
+    $requete = "SELECT `nom_Salarie`,`Prenom`,Nom_Equipe FROM `salarie` join equipe on equipe.Id_Equipe = salarie.Id_Equipe WHERE salarie.id_Salarie= :id ";
    
+    $prepReq = $pdo->prepare($requete);
+    $prepReq->BindValue(':id',$id);
+    $execPrepReq = $prepReq->execute();
+    $data = $prepReq->fetch(PDO::FETCH_ASSOC);
+    return $data;
+}
 ?>
