@@ -34,8 +34,8 @@ if(!isset($_COOKIE["moncookie"]))
 
   include_once("Vues\header-historique.php"); // ajout à l'aide du php de l'header 
 
-  include_once("Vues\landing-historique.php") ;
-  include_once("Vues\Footer.php") // ajout à l'aide du php de la landing page (liste des formations)
+  include_once("Vues\landing-historique.php") ; // ajout de la liste des formations
+  include_once("Vues\Footer.php") // ajout à l'aide du php du footer (liste des formations)
 
   ?>
   

@@ -15,7 +15,7 @@
 <?php
      insertstatut();
        
-        $url = "../index.php";
+        $url = "../index.php"; // redirection vers la page d'accueil
         
         redirection($url);
         

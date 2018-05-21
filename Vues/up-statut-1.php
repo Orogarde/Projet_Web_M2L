@@ -17,7 +17,7 @@
      statut1();
     
        
-        $url = "../index.php";
+        $url = "../index.php"; // redirection vers la page d'accueil
         echo 'redui';
         redirection($url);
         

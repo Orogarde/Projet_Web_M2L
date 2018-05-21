@@ -24,14 +24,14 @@
 
 setcookie("moncookie","",time()-3600);
 
-include_once("Vues\header-connexion.php");
+include_once("Vues\header-connexion.php"); // ajout de l'header
 ?>
 <div class="container">
     <div class="row d-flex justify-content-center">
     <div class="col-md-12  d-flex justify-content-center">
     </div>
         <div class="col-md-12  d-flex justify-content-center">
-    <form id="form1" name="form1" action="" method="POST" enctype="multipart/form-data" >
+    <form id="form1" name="form1" action="" method="POST" enctype="multipart/form-data" ><!--formulaire de connexion -->
             <table id="cox" >
                             <tr>
 								<td><label for="prenom">Votre Login : </label></td>
@@ -56,7 +56,7 @@ include_once("Vues\header-connexion.php");
      </div>
       </div>   
       <?php
-				
+				// vérification du POST et si "true", vérification des identifiants et connexion ou non
                 if (isset($_POST['oki']))
                 {
                     $nom = $_POST['identifiant'];

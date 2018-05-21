@@ -9,9 +9,9 @@ include
 </head>
 <body>
 <?php
-setcookie("moncookie","",time()-3600); 
+setcookie("moncookie","",time()-3600); // destruction du cookie 
 
-$url = "Pageconnexion.php";
+$url = "Pageconnexion.php"; // redirection vers la page de connection
 redirection($url);
 exit();
 

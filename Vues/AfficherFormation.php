@@ -2,7 +2,7 @@
 <?php 
 
 
-function AfficherFormationE()
+function AfficherFormationE() // affichage des formations en attentes de validations
 {
     $data = SelectFormationEquipe($_COOKIE["moncookie"]);
 
@@ -51,7 +51,7 @@ function AfficherFormationE()
     }
 
 
-    function AfficherFormation()
+    function AfficherFormation() // affichage des offres de formations
     {
         $data = SelectFormation();
 
@@ -111,7 +111,7 @@ function AfficherFormationE()
 
 
 
-function AfficherFormationS()
+function AfficherFormationS() // affichage des formations suivies et en attentes de validations
 {
 
 $data = nomFormationV($_COOKIE["moncookie"]);
@@ -203,7 +203,7 @@ foreach ($data as $valeur) {
                                 if (!$forma_dispo) echo " <div id='bbb'>Vous ne suivez pas de formations</div>";
 
                             }
-        function historique()
+        function historique() // affichage des formations en attentes
         {
 
             $data = Selecthisto($_COOKIE["moncookie"]);
@@ -251,7 +251,7 @@ foreach ($data as $valeur) {
     if (!$forma_dispo) echo " <div id='bbb'>Vous n'avez pas de formations dans votre historique</div>";
 
 }
-function AfficherInfos()
+function AfficherInfos() // affichage des informations du compte
 {
     $data = SelectinfosSalarie($_COOKIE["moncookie"]);
 

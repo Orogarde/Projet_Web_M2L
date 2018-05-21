@@ -1,9 +1,9 @@
 
 
 
-<div class="container-fluid" > <!-- création d'un container pour l'header du site qui contient le logo ainsi que différents boutons -->
+<div class="container-fluid" > <!-- container des informations de session -->
     <div class="row justify-content-center align-items-center" id="session"  >
-    <div class="col "> <!-- logo de la maison des ligues -->
+    <div class="col "> 
    
 <?php 
 

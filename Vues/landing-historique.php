@@ -8,7 +8,7 @@
     <!--  </div>
 	  </div>-->
 	  
-      <div class="col-md-12 " id="FS"> <!-- liste des formations suivies -->
+      <div class="col-md-12 " id="FS"> <!-- liste des formations dans l'historique -->
  
 			<section ><h3 id="bb">Historique Des Formations  : </h3>
 			

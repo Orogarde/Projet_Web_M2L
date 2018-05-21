@@ -1,12 +1,7 @@
 <div class="container-fluid"> <!-- création d'un container pour les listes de formations   -->
 	
 <div class="row" id="landing" >
-  <!--    <div class="col-md-1">
-        <div class="row" >--> <!--  bouton pour imprimer une formation -->
-        
-		 <!--<input class="btn btn-primary" type="submit" value="Imprimer">-->
-    <!--  </div>
-	  </div>-->
+ 
 	  
       <div class="col-md-5 " id="FS"> <!-- liste des formations suivies -->
  

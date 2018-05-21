@@ -14,7 +14,8 @@
 	
 }
 
-function SelectFormation()  // fonction permettant de retourner une phrase avec l'id et le nom d'une formation 
+function SelectFormation()  // récupération d'une liste de toutes les formations
+// fonction permettant de retourner une phrase avec l'id et le nom d'une formation 
 // dans chaque ligne de la liste ainsi que l'affichage à l'aide d'un collapse de la description de la formation
 {
 
@@ -26,7 +27,8 @@ function SelectFormation()  // fonction permettant de retourner une phrase avec 
     $data = $prepReq->fetchAll();
     return $data;
 }
-function SelectFormationEquipe($id)  // fonction permettant de retourner une phrase avec l'id et le nom d'une formation 
+function SelectFormationEquipe($id)  // liste des salarie en fonction de l'id de l'equipe dans le cadre de la validation de formation(s)
+// fonction permettant de retourner une phrase avec l'id et le nom d'une formation 
 // dans chaque ligne de la liste ainsi que l'affichage à l'aide d'un collapse de la description de la formation
 {
 
@@ -38,18 +40,7 @@ function SelectFormationEquipe($id)  // fonction permettant de retourner une phr
     $data = $prepReq->fetchAll();
     return $data;
 }
-function SelectidEquipe($id)  // fonction permettant de retourner une phrase avec l'id et le nom d'une formation 
-// dans chaque ligne de la liste ainsi que l'affichage à l'aide d'un collapse de la description de la formation
-{
 
-    $pdo = connexion();
-    $requete = "select id_Salarie from salarie natural join participer natural join formation where statuts='2' and salarie.Id_Equipe = :id ";
-    $prepReq = $pdo->prepare($requete);
-    $prepReq->BindValue(':id',$id);
-    $execPrepReq = $prepReq->execute();
-    $data = $prepReq->fetchAll();
-    return $data;
-}
 /*function requprep($cont)
 {   
 
@@ -66,7 +57,7 @@ function SelectidEquipe($id)  // fonction permettant de retourner une phrase ave
 
 }
 */
-function nomFormationV($id)
+function nomFormationV($id) // récupération d'une liste des formations validées
 {
     $pdo = connexion();
     $requete = "select * from participer join formation on participer.id_Formation=Formation.id_Formation where statuts=1 and participer.id_Salarie = :id";
@@ -76,7 +67,7 @@ function nomFormationV($id)
     $data = $prepReq->fetchAll();
     return $data;
 } 
-function nomFormationEnatt($id)
+function nomFormationEnatt($id) // récupération d'une liste des formations en attentes de validations
 {
     $pdo = connexion();
     $requete = "select * from participer join formation on participer.id_Formation=Formation.id_Formation where statuts=2 and participer.id_Salarie = :id";
@@ -87,7 +78,7 @@ function nomFormationEnatt($id)
     return $data;
 } 
 
-function nomEquipe($id)
+function nomEquipe($id) // récupération du nom de l'équipe
 {
     $pdo = connexion();
     $requete = "select Nom_Equipe from equipe where id_Equipe = :id";
@@ -97,7 +88,7 @@ function nomEquipe($id)
     $data = $prepReq->fetch();
     return $data;
 }
-function nomSalarie($id)
+function nomSalarie($id) // récupération du nom du salarie
 {
     $pdo = connexion();
     $requete = "SELECT nom_Salarie from salarie where id_Salarie= :id";
@@ -107,7 +98,8 @@ function nomSalarie($id)
     $data = $prepReq->fetch();
     return $data;
 }
-function verifetat($nomformation){
+function verifetat($nomformation) // fonction qui vérifie l'état des formations
+{
     $pdo = connexion();
     $requete = "SELECT intitule_formation from formation inner join participer on formation.id_Formation = participer.id_Formation inner join salarie on participer.id_Salarie=salarie.id_Salarie
      where salarie.id_Salarie =:id and (statuts=1 or statuts=2 or statuts=4) and Date_formation>CURDATE() and intitule_formation=:formation";
@@ -120,7 +112,7 @@ function verifetat($nomformation){
 
 }
 
-function insertstatut() 
+function insertstatut() // creation d'une ligne dans la table participer reliant un salarie et  à une formation
 {
     $connexion = connexion();
     
@@ -132,7 +124,7 @@ function insertstatut()
     $execPrepRequete = $PrepRequete->execute();
 }
 
-function deletestatut()
+function deletestatut() // suppression d'une ligne reliant un salarie à une formation
 {
     
     $connexion = connexion();
@@ -145,7 +137,7 @@ function deletestatut()
     $execPrepRequete = $PrepRequete->execute();
 }
 
-function gotohistorique()
+function gotohistorique() // changement de statut d'une formation pour l'intégrer dans l'historique
 {
     $connexion = connexion();
     
@@ -158,7 +150,7 @@ function gotohistorique()
  
 }
 
-function statut1()
+function statut1() // changement de statut pour validation d'une formation
 {
     $connexion = connexion();
     
@@ -170,7 +162,7 @@ function statut1()
     $execPrepRequete = $PrepRequete->execute();
 }
    
-function ajout($format)
+function ajout($format) // ajout dans la table participer d'une ligne reliant par un statut un salarie à une formation
 {
 	$pdo=connexion();
 	$req='INSERT INTO `participer` (`id_Salarie`, `id_Formation`, `statuts`) VALUES (:id, :forma, 2)';
@@ -180,8 +172,7 @@ function ajout($format)
 	$pdo=NULL;
     
 }
-function Selecthisto($id)  // fonction permettant de retourner une phrase avec l'id et le nom d'une formation 
-// dans chaque ligne de la liste ainsi que l'affichage à l'aide d'un collapse de la description de la formation
+function Selecthisto($id)  // sélection des formation de l'historique
 {
 
     $pdo = connexion();
@@ -193,7 +184,7 @@ function Selecthisto($id)  // fonction permettant de retourner une phrase avec l
     return $data;
 }
 
-function test_pdf($id)
+function test_pdf($id) // test du pdf avec une  formation en fonction de l'id de cette dernière
 {
     $pdo=connexion();
     $req="select * from formation where id_Formation= :id";
@@ -202,8 +193,7 @@ function test_pdf($id)
     $resultat=$prep->fetchAll();
     return $resultat;
 }
-function SelectinfosSalarie($id)  // fonction permettant de retourner une phrase avec l'id et le nom d'une formation 
-// dans chaque ligne de la liste ainsi que l'affichage à l'aide d'un collapse de la description de la formation
+function SelectinfosSalarie($id)  // récupération des informations de compte par rapport à l'id du salarie
 {
 
     $pdo = connexion();
